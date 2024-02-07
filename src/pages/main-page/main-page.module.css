@@ -11,4 +11,5 @@
 .sidebar {
     transition: all .3s;
     position: relative;
+    background-color: #fff;
 }

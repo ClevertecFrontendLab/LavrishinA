@@ -1,8 +1,8 @@
 import {Layout} from "antd";
 import {NavMenu} from "@components/menu";
 import {useState} from "react";
-import {MenuFoldOutlined, MenuUnfoldOutlined} from "@ant-design/icons";
 import s from "./main-page.module.css"
+import {Trigger} from "@components/trigger";
 
 const {Header, Footer, Sider, Content} = Layout;
 
@@ -15,9 +15,7 @@ export const MainPage = () => {
             <Sider className={s.sidebar}
                    width={208}
                    collapsedWidth={64}
-                   trigger={collapsed ?
-                       <MenuUnfoldOutlined style={{position: "absolute", top: "50%", left: "100%"}}/> :
-                       <MenuFoldOutlined style={{position: "absolute", top: "50%", left: "100%"}}/>}
+                   trigger={<Trigger isCollapsed={collapsed}/>}
                    collapsible
                    collapsed={collapsed}
                    onCollapse={() => setCollapsed(!collapsed)}>

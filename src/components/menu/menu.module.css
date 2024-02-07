@@ -3,7 +3,6 @@
     flex-direction: column;
     gap: 40px;
     padding: 0 16px;
-    background-color: white;
     transition: all .3s ease-in;
 
     & li {
