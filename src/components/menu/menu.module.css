@@ -1,3 +1,4 @@
+
 .menu {
     display: flex;
     flex-direction: column;
@@ -27,3 +28,19 @@
     }
 }
 
+.logoContainer {
+    text-align: center;
+
+    margin-bottom: 67px;
+    margin-top: 48px;
+}
+
+.logo {
+    width: 133px;
+    height: 33px;
+}
+
+.collapsedLogo {
+    width: 28px;
+    height: 28px;
+}
