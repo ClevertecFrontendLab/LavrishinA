@@ -2,31 +2,39 @@ import {CalendarOutlined, HeartFilled, IdcardOutlined, TrophyFilled} from "@ant-
 import s from "./Menu.module.css"
 import {Menu} from "antd";
 
-export const NavMenu = () => {
+type Props = {
+    isCollapsed: boolean
+}
+export const NavMenu = ({isCollapsed}: Props) => {
     return (
         <Menu
-            className={s.menu}
-            defaultSelectedKeys={['1']}
+            mode={"vertical"}
+            className={`${s.menu} ${isCollapsed ? s.collapsed : ""}`}
             items={[
                 {
                     key: '1',
                     icon: <CalendarOutlined style={{color: "#120338"}}/>,
-                    label: 'Календарь',
+                    label: "Календарь",
+                    title: ""
                 },
                 {
                     key: '2',
                     icon: <HeartFilled style={{color: "#120338"}}/>,
-                    label: 'Тренировки',
+                    label: "Тренировки",
+                    title: ""
                 },
                 {
                     key: '3',
                     icon: <TrophyFilled style={{color: "#120338"}}/>,
-                    label: 'Достижения',
+                    label: "Достижения",
+                    title: ""
+
                 },
                 {
                     key: '4',
                     icon: <IdcardOutlined style={{color: "#120338"}}/>,
-                    label: "Профиль"
+                    label: "Профиль",
+                    title: ""
                 }
             ]}
         />

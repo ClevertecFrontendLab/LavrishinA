@@ -3,14 +3,28 @@
     flex-direction: column;
     gap: 40px;
     padding: 0 16px;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 130%;
+    background-color: white;
+    transition: all .3s ease-in;
 
     & li {
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        gap: 12px
+        gap: 12px;
+
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 130%;
+        text-overflow: clip;
+        overflow: hidden;
     }
 }
+
+.collapsed {
+    padding: 0 calc(50% - 16px / 2);
+
+    & > span + span {
+        opacity: 0;
+    }
+}
+

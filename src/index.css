@@ -8,10 +8,11 @@
 
 body {
     font-family: 'Inter', sans-serif;
+    backdrop-filter: blur(12px);
+    background: rgba(121, 156, 213, 0.1);
 }
 
 ul {
     list-style: none;
 }
-
 

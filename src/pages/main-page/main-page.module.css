@@ -2,6 +2,13 @@
     margin: 0 auto;
     max-width: 1440px;
     display: flex;
+    height: 1024px;
+    background: url("public/main_page_light.jpeg") no-repeat center;
+    background-size: cover;
 }
 
 
+.sidebar {
+    transition: all .3s;
+    position: relative;
+}
