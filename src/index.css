@@ -1,3 +1,5 @@
+@import 'components/menu/menu.css';
+
 *,
 *::after,
 *::before {
@@ -12,23 +14,24 @@ body {
     background: rgba(121, 156, 213, 0.1);
 }
 
-
 .ant-layout-sider {
     background: #fff;
 }
 
-
-.ant-layout, .ant-layout-footer, .ant-layout-header {
+.ant-layout,
+.ant-layout-footer,
+.ant-layout-header {
     background: none;
 }
 
-.ant-layout-footer, .ant-layout-header {
+.ant-layout-footer,
+.ant-layout-header {
     padding: 0;
     height: auto;
     line-height: 1;
 }
 
 .ant-layout.ant-layout-has-sider {
-    background: url("public/main_page_light.jpeg") no-repeat center;
+    background: url('public/main_page_light.jpeg') no-repeat center;
     background-size: cover;
 }
