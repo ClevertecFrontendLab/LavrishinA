@@ -9,12 +9,23 @@ type Props = {
 export const NavMenu = ({isCollapsed}: Props) => {
     return (
         <>
-            <div  className={s.logoContainer}>
-                <svg className={s.logo}>
-                    <use xlinkHref={`${sprite}#logo`}/>
-                </svg>
-            </div>
+            {isCollapsed ?
+                <div className={`${s.logoContainer} ${s.minLogo}`}>
+                    <svg className={s.collapsedLogo}>
+                        <use xlinkHref={`${sprite}#collapsedlogo`}/>
+                    </svg>
+                </div>
+                :
+                <div className={`${s.logoContainer} ${s.fullLogo}`}>
+                    <svg className={s.logo}>
+                        <use xlinkHref={`${sprite}#logo`}/>
+                    </svg>
+                </div>
+            }
+
             <Menu
+                className={s.menu}
+
                 mode={"vertical"}
                 items={[
                     {
@@ -38,7 +49,10 @@ export const NavMenu = ({isCollapsed}: Props) => {
                         label: "Профиль",
                     }
                 ]}
-            />
+            >
+
+            </Menu>
+
         </>
     );
 };
