@@ -1,38 +1,6 @@
 
-.menu {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    padding: 0 16px;
-    transition: all .3s ease-in;
-
-    & li {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 12px;
-
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 130%;
-        text-overflow: clip;
-        overflow: hidden;
-    }
-}
-
-.collapsed {
-    padding: 0 calc(50% - 16px / 2);
-
-    & > span + span {
-        opacity: 0;
-    }
-}
-
 .logoContainer {
-    text-align: center;
-
-    margin-bottom: 67px;
-    margin-top: 48px;
+    padding: 14px 46px 17px 29px;
 }
 
 .logo {

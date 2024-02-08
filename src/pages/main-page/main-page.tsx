@@ -10,16 +10,17 @@ const {Header, Footer, Sider, Content} = Layout;
 export const MainPage = () => {
     const [collapsed, setCollapsed] = useState(true);
 
+    const collapseSidebarHandler = () => setCollapsed(prevState => !prevState)
     return (
         <Layout className={s.container}>
-            <Sider className={s.sidebar}
-                   width={208}
+            <Sider width={208}
                    collapsedWidth={64}
-                   trigger={<Trigger isCollapsed={collapsed}/>}
+                   trigger={null}
                    collapsible
                    collapsed={collapsed}
-                   onCollapse={() => setCollapsed(!collapsed)}>
+            >
                 <NavMenu isCollapsed={collapsed}/>
+                <Trigger isCollapsed={collapsed} onTrigger={collapseSidebarHandler}/>
             </Sider>
             <Layout>
                 <Header>Header</Header>
@@ -29,3 +30,4 @@ export const MainPage = () => {
         </Layout>
     );
 };
+

@@ -12,7 +12,6 @@
     left: 100%;
     transform: translateY(-50%);
 
-
     & :hover {
         cursor: pointer;
     }
