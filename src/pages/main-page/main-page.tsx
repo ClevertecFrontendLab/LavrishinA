@@ -1,10 +1,9 @@
 import { Layout } from 'antd';
 import { NavMenu } from '@components/menu';
 import { useState } from 'react';
-
-import s from './main-page.module.css';
 import { Trigger } from '@components/menu/trigger';
-import { ExitButton } from '@components/menu/exit-button/exit-button';
+import { ExitButton } from '@components/menu/exit-button';
+import s from './main-page.module.css';
 
 const { Header, Footer, Sider, Content } = Layout;
 

@@ -1,10 +1,10 @@
-
 .logoContainer {
     text-align: center;
     margin-top: 30px;
     margin-bottom: 45px;
 }
 
+/*max-logo*/
 .logo {
     width: 133px;
     height: 33px;
@@ -15,6 +15,7 @@
     overflow: hidden;
 }
 
+/*min-logo*/
 .collapsedLogo {
     width: 28px;
     height: 28px;

@@ -1,26 +1,14 @@
 import { CalendarOutlined, HeartFilled, IdcardOutlined, TrophyFilled } from '@ant-design/icons';
 import { Menu } from 'antd';
-import sprite from '@utils/sprite.svg';
-import s from './menu.module.css';
+import { MaxLogo, MinLogo } from '@components/menu/logo';
+
 type Props = {
     isCollapsed: boolean;
 };
 export const NavMenu = ({ isCollapsed }: Props) => {
     return (
         <>
-            {isCollapsed ? (
-                <div className={`${s.logoContainer} ${s.minLogo}`}>
-                    <svg className={s.collapsedLogo}>
-                        <use xlinkHref={`${sprite}#collapsedlogo`} />
-                    </svg>
-                </div>
-            ) : (
-                <div className={`${s.logoContainer} ${s.fullLogo}`}>
-                    <svg className={s.logo}>
-                        <use xlinkHref={`${sprite}#logo`} />
-                    </svg>
-                </div>
-            )}
+            {isCollapsed ? <MinLogo /> : <MaxLogo />}
 
             <Menu
                 mode={'vertical'}
