@@ -1,5 +1,5 @@
-import s from './trigger.module.css';
 import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
+import s from './trigger.module.css';
 
 type Props = {
     isCollapsed: boolean;

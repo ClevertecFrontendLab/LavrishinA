@@ -1,0 +1,12 @@
+.button {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    transform: translateY(-100%);
+
+    overflow: hidden;
+}
+
+.icon {
+    margin-right: 15px;
+}

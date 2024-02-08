@@ -1,5 +1,3 @@
-@import 'components/menu/menu.css';
-
 *,
 *::after,
 *::before {
@@ -34,4 +32,9 @@ body {
 .ant-layout.ant-layout-has-sider {
     background: url('public/main_page_light.jpeg') no-repeat center;
     background-size: cover;
+}
+
+
+.ant-menu-vertical .ant-menu-item:not(:last-child) {
+    margin-bottom: 16px;
 }
