@@ -5,27 +5,9 @@
 }
 
 
-.header {
-    display: grid;
-    grid-template-columns: minmax(min-content, 1190px) 1fr;
-    row-gap: 15px;
-    padding: 16px 24px 24px 24px;
+.cards {
+    display: flex;
 }
-
-.breadcrumb {
-    grid-column: 1/ -1;
-}
-
-
-.title {
-    font-size: 38px;
-    font-weight: 700;
-    line-height: 130%;
-    grid-column: 1/ 2;
-    margin: 0;
-}
-
-
 
 
 @media (max-width: 992px) {
