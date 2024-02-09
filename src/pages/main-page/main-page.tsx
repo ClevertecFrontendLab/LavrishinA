@@ -12,7 +12,7 @@ export const MainPage = () => {
     const [collapsed, setCollapsed] = useState(true);
 
     const collapseSidebarHandler = () => setCollapsed((prevState) => !prevState);
-
+    console.log('render');
     return (
         <Layout className={s.wrapper}>
             <Sider width={208} collapsedWidth={64} trigger={null} collapsible collapsed={collapsed}>
@@ -24,9 +24,10 @@ export const MainPage = () => {
                 <Header>
                     <div className={s.header}>
                         <p className={s.breadcrumb}>Главная</p>
+
                         <h1 className={s.title}>
-                            Приветствуем тебя в CleverFit — приложении, которое поможет тебе
-                            добиться своей мечты!
+                            <p>Приветствуем тебя в CleverFit — приложении,</p>
+                            <p>которое поможет тебе добиться своей мечты!</p>
                         </h1>
 
                         <Button
@@ -38,7 +39,7 @@ export const MainPage = () => {
                         </Button>
                     </div>
                 </Header>
-                <Content>Content</Content>
+                <Content></Content>
                 <Footer>Footer</Footer>
             </Layout>
         </Layout>

@@ -7,7 +7,7 @@
 
 .header {
     display: grid;
-    grid-template-columns: minmax(min-content, 1045px) 1fr;
+    grid-template-columns: minmax(min-content, 1190px) 1fr;
     row-gap: 15px;
     padding: 16px 24px 24px 24px;
 }
@@ -18,12 +18,24 @@
 
 
 .title {
-    color: rgb(38, 38, 38);
     font-size: 38px;
     font-weight: 700;
     line-height: 130%;
     grid-column: 1/ 2;
     margin: 0;
-
 }
 
+
+
+
+@media (max-width: 992px) {
+    .title {
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+
+    :global(.anticon.anticon-setting) {
+        display: none;
+    }
+}
