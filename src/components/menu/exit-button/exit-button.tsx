@@ -12,12 +12,13 @@ type Props = {
 export const ExitButton = ({ children }: Props) => {
     return (
         <Button
+            block
             style={{ position: 'absolute', textAlign: 'start' }}
             type={'default'}
             size={'large'}
             className={s.button}
+            icon={<ExitIcon className={s.icon} />}
         >
-            <ExitIcon className={s.icon} />
             {children}
         </Button>
     );
