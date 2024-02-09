@@ -1,4 +1,3 @@
-import React from 'react';
 import s from './logo.module.css';
 import sprite from '@utils/sprite.svg';
 

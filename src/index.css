@@ -6,19 +6,24 @@
     box-sizing: border-box;
 }
 
+ h1, p {
+     margin: 0;
+ }
+
 body {
     font-family: 'Inter', sans-serif;
     backdrop-filter: blur(12px);
     background: rgba(121, 156, 213, 0.1);
 }
 
-.ant-layout-sider {
+
+.ant-layout-sider, .ant-layout-header {
     background: #fff;
 }
 
+
 .ant-layout,
-.ant-layout-footer,
-.ant-layout-header {
+.ant-layout-footer {
     background: none;
 }
 

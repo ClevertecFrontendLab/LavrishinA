@@ -1,6 +1,29 @@
-.container {
+.wrapper {
     margin: 0 auto;
     max-width: 1440px;
     height: 1024px;
+}
+
+
+.header {
+    display: grid;
+    grid-template-columns: minmax(min-content, 1045px) 1fr;
+    row-gap: 15px;
+    padding: 16px 24px 24px 24px;
+}
+
+.breadcrumb {
+    grid-column: 1/ -1;
+}
+
+
+.title {
+    color: rgb(38, 38, 38);
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 130%;
+    grid-column: 1/ 2;
+    margin: 0;
+
 }
 
