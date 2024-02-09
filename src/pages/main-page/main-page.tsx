@@ -32,25 +32,7 @@ export const MainPage = () => {
                 <Header>
                     <HeaderContent />
                 </Header>
-                <Content>
-                    <div className={s.cards}>
-                        {/*<Card*/}
-                        {/*    headStyle={{ textAlign: 'center', fontSize: '16px' }}*/}
-                        {/*    bodyStyle={{ textAlign: 'center' }}*/}
-                        {/*    size={'small'}*/}
-                        {/*    style={{ width: '240px' }}*/}
-                        {/*    title={<Typography.Text>Расписать тренировки</Typography.Text>}*/}
-                        {/*>*/}
-                        {/*    <Button*/}
-                        {/*        style={{ color: '#2F54EB' }}*/}
-                        {/*        type={'link'}*/}
-                        {/*        icon={<HeartFilled />}*/}
-                        {/*    >*/}
-                        {/*        Тренировки*/}
-                        {/*    </Button>*/}
-                        {/*</Card>*/}
-                    </div>
-                </Content>
+                <Content></Content>
                 <Footer>Footer</Footer>
             </Layout>
         </Layout>
