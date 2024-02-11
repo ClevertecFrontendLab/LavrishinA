@@ -1,5 +1,5 @@
 .ant-layout-header {
-    background-color: var(--primary-light);
+    background-color: var(--primary-light-1);
 }
 
 .header {
@@ -20,6 +20,7 @@
     line-height: 130%;
     grid-column: 1/ 2;
     margin: 0;
+
 }
 
 @media (max-width: 992px) {
@@ -34,9 +35,9 @@
 }
 
 
-@media (max-width: 992px) {
+@media (max-width: 576px) {
     .header {
-        row-gap: 30px;
+        row-gap: 10px;
     }
 
 

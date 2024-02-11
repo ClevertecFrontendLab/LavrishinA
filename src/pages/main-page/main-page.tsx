@@ -5,6 +5,9 @@ import { NavMenu } from '@components/menu';
 import { Trigger } from '@components/menu/trigger';
 import { HeaderContent } from '@components/header-content';
 import { MenuButton } from '@components/menu/menu-button/menu-button.tsx';
+import { MainContent } from '@components/main-content';
+import { CardItem } from '@components/card/card.tsx';
+import { CalendarOutlined, HeartFilled, IdcardOutlined } from '@ant-design/icons';
 
 const { Header, Footer, Sider, Content } = Layout;
 
@@ -32,8 +35,26 @@ export const MainPage = () => {
                 <Header>
                     <HeaderContent />
                 </Header>
-                <Content></Content>
-                <Footer>Footer</Footer>
+                <Content>
+                    <MainContent>
+                        <CardItem
+                            title={'Расписать тренировки'}
+                            linkTitle={'Тренировки'}
+                            icon={<HeartFilled />}
+                        />
+                        <CardItem
+                            title={'Назначить календарь'}
+                            linkTitle={'Календарь'}
+                            icon={<CalendarOutlined />}
+                        />
+                        <CardItem
+                            title={'Заполнить Профиль'}
+                            linkTitle={'Профиль'}
+                            icon={<IdcardOutlined />}
+                        />
+                    </MainContent>
+                </Content>
+                <Footer></Footer>
             </Layout>
         </Layout>
     );

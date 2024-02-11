@@ -1,24 +1,37 @@
 @import "/src/pages/main-page/main-page.css";
 
-@import  "/src/components/menu/menu.css";
+@import "/src/components/menu/menu.css";
 @import "/src/components/menu/trigger/trigger.css";
 @import "/src/components/menu/menu-button/menu-button.css";
 @import "/src/components/menu/logo/logo.css";
 
 @import "/src/components/header-content/header-content.css";
+@import "/src/components/card/card.css";
 
 h1, h2, h3, h4, p {
     margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
 }
 
 
 body {
     font-family: 'Inter', sans-serif;
     backdrop-filter: blur(12px);
-    background: rgba(121, 156, 213, 0.1);
+    background: var(--primary-light-1);
+}
+
+ul {
+    list-style: none;
 }
 
 
 :root {
-    --primary-light: #F0F5FF;
+    --white: #fff;
+    --primary-light-1: #F0F5FF;
+    --primary-light-2: #2F54EB;
+    --primary-dark-1: #061178;
 }
