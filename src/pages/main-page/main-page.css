@@ -1,7 +1,7 @@
 .wrapper {
     margin: 0 auto;
     max-width: 1440px;
-    /*height: 1024px;*/
+    height: 1024px;
 }
 
 .ant-layout-sider {
@@ -21,8 +21,13 @@
     line-height: 1;
 }
 
+.ant-layout-footer {
+    padding-bottom: 42px;
+}
+
 .ant-layout-content {
     padding: 24px;
+
 }
 
 .ant-layout.ant-layout-has-sider {
@@ -34,39 +39,28 @@
     margin-bottom: 16px;
 }
 
-.content-grid {
-    max-width: 752px;
-    column-gap: 16px;
+.footer-container {
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    flex-wrap: wrap;
     row-gap: 24px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(182px, 1fr));
-    grid-auto-flow: row;
-    margin-bottom: 180px;
-
 }
 
-.benefits {
-    grid-column: 1/ -1;
-    padding: 24px;
-    font-size: 16px;
-    color: var(--primary-dark-1);
-    font-weight: 400;
-    line-height: 130%;
-    background-color: var(--white);
-}
 
-.benefits-text {
-    grid-column: 1/ -1;
-    padding: 24px;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 130%;
-    background-color: var(--white);
+@media (max-width: 992px) {
+    .wrapper {
+        height: 1194px;
+    }
 }
-
 
 
 @media (max-width: 576px) {
+    .wrapper {
+        height: auto;
+    }
+
     .side-bar {
         position: absolute;
         height: 100dvh;
@@ -80,5 +74,4 @@
         padding: 24px 16px
     }
 }
-
 

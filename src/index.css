@@ -6,7 +6,12 @@
 @import "/src/components/menu/logo/logo.css";
 
 @import "/src/components/header-content/header-content.css";
+
+@import "/src/components/main-content/main-content.css";
 @import "/src/components/card/card.css";
+
+@import "/src/components/footer-card/footer-card.css";
+
 
 h1, h2, h3, h4, p {
     margin: 0;

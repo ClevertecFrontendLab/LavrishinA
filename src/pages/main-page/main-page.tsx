@@ -1,6 +1,6 @@
 import useBreakpoint from 'antd/es/grid/hooks/useBreakpoint';
 import { useState } from 'react';
-import { Layout } from 'antd';
+import { Button, Layout } from 'antd';
 import { NavMenu } from '@components/menu';
 import { Trigger } from '@components/menu/trigger';
 import { HeaderContent } from '@components/header-content';
@@ -8,6 +8,7 @@ import { MenuButton } from '@components/menu/menu-button/menu-button.tsx';
 import { MainContent } from '@components/main-content';
 import { CardItem } from '@components/card/card.tsx';
 import { CalendarOutlined, HeartFilled, IdcardOutlined } from '@ant-design/icons';
+import { FooterCard } from '@components/footer-card/footer-card.tsx';
 
 const { Header, Footer, Sider, Content } = Layout;
 
@@ -48,13 +49,25 @@ export const MainPage = () => {
                             icon={<CalendarOutlined />}
                         />
                         <CardItem
-                            title={'Заполнить Профиль'}
+                            title={'Заполнить профиль'}
                             linkTitle={'Профиль'}
                             icon={<IdcardOutlined />}
                         />
                     </MainContent>
                 </Content>
-                <Footer></Footer>
+                <Footer>
+                    <div className={'footer-container'}>
+                        <div>
+                            <Button type={'link'} size={'large'}>
+                                Смотреть отзывы
+                            </Button>
+                        </div>
+
+                        <div className={'footer-card'}>
+                            <FooterCard />
+                        </div>
+                    </div>
+                </Footer>
             </Layout>
         </Layout>
     );
