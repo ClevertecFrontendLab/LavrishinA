@@ -2,22 +2,21 @@ import { Button } from 'antd';
 import Icon from '@ant-design/icons';
 import { CustomIconComponentProps } from '@ant-design/icons/lib/components/Icon';
 import sprite from '@utils/sprite.svg';
-import s from './exit-button.module.css';
 import { ReactNode } from 'react';
 
 type Props = {
     children?: ReactNode;
 };
 
-export const ExitButton = ({ children }: Props) => {
+export const MenuButton = ({ children }: Props) => {
     return (
         <Button
             block
             style={{ position: 'absolute', textAlign: 'start' }}
             type={'default'}
             size={'large'}
-            className={s.button}
-            icon={<ExitIcon className={s.icon} />}
+            className={'menu-button'}
+            icon={<ExitIcon className={'icon'} />}
         >
             {children}
         </Button>

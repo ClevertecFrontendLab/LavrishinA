@@ -1,25 +1,30 @@
 import { Button } from 'antd';
 import { SettingOutlined } from '@ant-design/icons';
-import s from './header-content.module.css';
+import useBreakpoint from 'antd/es/grid/hooks/useBreakpoint';
 
 export const HeaderContent = () => {
+    const breakpoints = useBreakpoint();
     return (
-        <div className={s.header}>
-            <p className={s.breadcrumb}>Главная</p>
+        <div className={'header'}>
+            <p className={'breadcrumb'}>Главная</p>
 
-            <h1 className={s.title}>
+            <h1 className={'title'}>
                 <p>Приветствуем тебя в CleverFit — приложении,</p>
                 <p>которое поможет тебе добиться своей мечты!</p>
             </h1>
 
-            <Button
-                style={{ justifySelf: 'end' }}
-                icon={<SettingOutlined />}
-                type={'text'}
-                size={'small'}
-            >
-                Настройки
-            </Button>
+            {breakpoints.xs ? (
+                <Button shape='circle' icon={<SettingOutlined />}></Button>
+            ) : (
+                <Button
+                    style={{ justifySelf: 'end' }}
+                    icon={<SettingOutlined />}
+                    type={'text'}
+                    size={'small'}
+                >
+                    Настройки
+                </Button>
+            )}
         </div>
     );
 };

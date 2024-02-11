@@ -1,0 +1,38 @@
+.wrapper {
+    margin: 0 auto;
+    max-width: 1440px;
+    height: 1024px;
+}
+
+.ant-layout-sider {
+    background: #fff;
+}
+
+.ant-layout,
+.ant-layout-footer {
+    background: none;
+}
+
+.ant-layout-footer,
+.ant-layout-header {
+    padding: 0;
+    height: auto;
+    line-height: 1;
+}
+
+.ant-layout.ant-layout-has-sider {
+    background: url('public/main_page_light.jpeg') no-repeat center;
+    background-size: cover;
+}
+
+.ant-menu-vertical .ant-menu-item:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+@media (max-width: 576px) {
+    .side-bar {
+        position: absolute;
+        height: 100dvh;
+    }
+}
+

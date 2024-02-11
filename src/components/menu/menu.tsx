@@ -1,6 +1,6 @@
 import { CalendarOutlined, HeartFilled, IdcardOutlined, TrophyFilled } from '@ant-design/icons';
-import { Menu } from 'antd';
 import { MaxLogo, MinLogo } from '@components/menu/logo';
+import { Menu } from 'antd';
 
 type Props = {
     isCollapsed: boolean;
@@ -9,7 +9,6 @@ export const NavMenu = ({ isCollapsed }: Props) => {
     return (
         <>
             {isCollapsed ? <MinLogo /> : <MaxLogo />}
-
             <Menu
                 mode={'vertical'}
                 items={[

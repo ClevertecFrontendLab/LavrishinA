@@ -1,5 +1,4 @@
 import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
-import s from './trigger.module.css';
 
 type Props = {
     isCollapsed: boolean;
@@ -8,7 +7,7 @@ type Props = {
 
 export const Trigger = ({ isCollapsed, onTrigger }: Props) => {
     return (
-        <div className={s.trigger} onClick={onTrigger}>
+        <div className={'trigger'} onClick={onTrigger}>
             {isCollapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
         </div>
     );

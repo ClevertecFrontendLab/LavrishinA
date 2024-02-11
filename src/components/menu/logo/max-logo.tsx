@@ -1,10 +1,9 @@
-import s from './logo.module.css';
 import sprite from '@utils/sprite.svg';
 
 export const MaxLogo = () => {
     return (
-        <div className={`${s.logoContainer} ${s.fullLogo}`}>
-            <svg className={s.logo}>
+        <div className={'logoContainer fullLogo'}>
+            <svg className={'logo'}>
                 <use xlinkHref={`${sprite}#logo`} />
             </svg>
         </div>

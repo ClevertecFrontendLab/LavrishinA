@@ -1,0 +1,12 @@
+
+@media (max-width: 576px) {
+   .ant-menu-item-icon {
+        display: none;
+        text-align: center;
+    }
+
+    .ant-menu-vertical .ant-menu-item {
+        padding: 0;
+    }
+
+}

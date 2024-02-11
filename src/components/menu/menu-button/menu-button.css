@@ -1,12 +1,20 @@
-.button {
+.menu-button {
     position: absolute;
     width: 100%;
     top: 100%;
     transform: translateY(-100%);
-
+    font-size: 14px;
     overflow: hidden;
 }
 
 .icon {
     margin-right: 15px;
+}
+
+@media (max-width: 576px) {
+    .anticon.icon {
+        display: none;
+
+    }
+
 }

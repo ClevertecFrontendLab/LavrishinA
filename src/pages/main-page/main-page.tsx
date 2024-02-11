@@ -1,11 +1,10 @@
+import useBreakpoint from 'antd/es/grid/hooks/useBreakpoint';
 import { useState } from 'react';
 import { Layout } from 'antd';
 import { NavMenu } from '@components/menu';
 import { Trigger } from '@components/menu/trigger';
-import { ExitButton } from '@components/menu/exit-button';
 import { HeaderContent } from '@components/header-content';
-import s from './main-page.module.css';
-import useBreakpoint from 'antd/es/grid/hooks/useBreakpoint';
+import { MenuButton } from '@components/menu/menu-button/menu-button.tsx';
 
 const { Header, Footer, Sider, Content } = Layout;
 
@@ -16,8 +15,9 @@ export const MainPage = () => {
     const collapseSidebarHandler = () => setCollapsed((prevState) => !prevState);
 
     return (
-        <Layout className={s.wrapper}>
+        <Layout className={'wrapper'}>
             <Sider
+                className={'side-bar'}
                 width={`${breakpoint.xs ? 106 : 208}`}
                 collapsedWidth={`${breakpoint.xs ? 0 : 64}`}
                 trigger={null}
@@ -26,7 +26,7 @@ export const MainPage = () => {
             >
                 <NavMenu isCollapsed={collapsed} />
                 <Trigger isCollapsed={collapsed} onTrigger={collapseSidebarHandler} />
-                <ExitButton>{collapsed ? '' : 'Выход'}</ExitButton>
+                <MenuButton>{collapsed ? '' : 'Выход'}</MenuButton>
             </Sider>
             <Layout>
                 <Header>
