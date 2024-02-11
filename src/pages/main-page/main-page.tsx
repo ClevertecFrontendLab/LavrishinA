@@ -8,7 +8,7 @@ import { MenuButton } from '@components/menu/menu-button/menu-button.tsx';
 import { MainContent } from '@components/main-content';
 import { CardItem } from '@components/card/card.tsx';
 import { CalendarOutlined, HeartFilled, IdcardOutlined } from '@ant-design/icons';
-import { FooterCard } from '@components/footer-card/footer-card.tsx';
+import { FooterCard } from '@components/footer-card';
 
 const { Header, Footer, Sider, Content } = Layout;
 

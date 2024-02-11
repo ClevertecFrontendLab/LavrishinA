@@ -1,4 +1,3 @@
-import React from 'react';
 import { Button, Card } from 'antd';
 import { AndroidFilled, AppleFilled } from '@ant-design/icons';
 
