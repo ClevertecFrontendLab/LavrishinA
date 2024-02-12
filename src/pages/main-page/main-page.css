@@ -63,7 +63,7 @@
 
     .side-bar {
         position: absolute;
-        height: 100dvh;
+        height: 100%;
     }
 
     .benefits {
