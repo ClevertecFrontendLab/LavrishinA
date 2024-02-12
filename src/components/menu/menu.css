@@ -1,10 +1,7 @@
 
-.ant-menu-item {
-    & svg[data-icon="calendar"] {
-        & path {
+.ant-menu-item  svg[data-icon="calendar"] path {
             fill: var(--primary-dark-1);
-        }
-    }
+
 }
 
 @media (max-width: 576px) {

@@ -1,9 +1,5 @@
-.ant-card {
-    & svg[data-icon="calendar"] {
-        & path {
-            fill: var(--primary-light-2);
-        }
-    }
+.ant-card svg[data-icon="calendar"] path {
+    fill: var(--primary-light-2);
 }
 
 
