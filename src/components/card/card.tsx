@@ -10,10 +10,10 @@ type Props = {
 export const CardItem = ({ title, linkTitle, icon }: Props) => {
     return (
         <Card
-            headStyle={{ textAlign: 'center', fontSize: '16px' }}
+            headStyle={{ fontSize: '16px' }}
             bodyStyle={{ textAlign: 'center' }}
             size={'small'}
-            style={{ maxWidth: '328px' }}
+            style={{ maxWidth: '328px', borderRadius: '3px' }}
             title={<Typography.Text>{title}</Typography.Text>}
         >
             <Button style={{ color: 'var(--primary-light-2)' }} type={'link'} icon={icon}>

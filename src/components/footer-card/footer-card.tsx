@@ -4,12 +4,17 @@ import { AndroidFilled, AppleFilled } from '@ant-design/icons';
 export const FooterCard = () => {
     return (
         <Card
-            headStyle={{ padding: '10px 0' }}
-            bodyStyle={{ padding: '12px 0', textAlign: 'center' }}
+            headStyle={{ padding: '10px 12px', textAlign: 'left' }}
+            bodyStyle={{
+                padding: '12px 0',
+
+                display: 'flex',
+                justifyContent: 'space-between',
+            }}
             title={
                 <div className={'footer-card-title'}>
                     <Button
-                        style={{ color: 'var(--primary-light-2)' }}
+                        style={{ color: 'var(--primary-light-2)', paddingLeft: 0 }}
                         size={'large'}
                         type={'link'}
                     >

@@ -1,4 +1,4 @@
-import { CalendarOutlined, HeartFilled, IdcardOutlined, TrophyFilled } from '@ant-design/icons';
+import { CalendarTwoTone, HeartFilled, IdcardOutlined, TrophyFilled } from '@ant-design/icons';
 import { MaxLogo, MinLogo } from '@components/menu/logo';
 import { Menu } from 'antd';
 
@@ -14,22 +14,22 @@ export const NavMenu = ({ isCollapsed }: Props) => {
                 items={[
                     {
                         key: '1',
-                        icon: <CalendarOutlined style={{ color: '#120338' }} />,
+                        icon: <CalendarTwoTone />,
                         label: 'Календарь',
                     },
                     {
                         key: '2',
-                        icon: <HeartFilled style={{ color: '#120338' }} />,
+                        icon: <HeartFilled style={{ color: ' var(--primary-dark-1) ' }} />,
                         label: 'Тренировки',
                     },
                     {
                         key: '3',
-                        icon: <TrophyFilled style={{ color: '#120338' }} />,
+                        icon: <TrophyFilled style={{ color: ' var(--primary-dark-1) ' }} />,
                         label: 'Достижения',
                     },
                     {
                         key: '4',
-                        icon: <IdcardOutlined style={{ color: '#120338' }} />,
+                        icon: <IdcardOutlined style={{ color: ' var(--primary-dark-1) ' }} />,
                         label: 'Профиль',
                     },
                 ]}

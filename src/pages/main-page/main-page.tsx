@@ -7,7 +7,7 @@ import { HeaderContent } from '@components/header-content';
 import { MenuButton } from '@components/menu/menu-button/menu-button.tsx';
 import { MainContent } from '@components/main-content';
 import { CardItem } from '@components/card/card.tsx';
-import { CalendarOutlined, HeartFilled, IdcardOutlined } from '@ant-design/icons';
+import { CalendarTwoTone, HeartFilled, IdcardOutlined } from '@ant-design/icons';
 import { FooterCard } from '@components/footer-card';
 
 const { Header, Footer, Sider, Content } = Layout;
@@ -46,7 +46,7 @@ export const MainPage = () => {
                         <CardItem
                             title={'Назначить календарь'}
                             linkTitle={'Календарь'}
-                            icon={<CalendarOutlined />}
+                            icon={<CalendarTwoTone />}
                         />
                         <CardItem
                             title={'Заполнить профиль'}

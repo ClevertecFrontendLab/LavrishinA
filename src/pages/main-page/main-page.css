@@ -63,10 +63,12 @@
 
     .side-bar {
         position: absolute;
+        height: 100dvh;
     }
 
     .benefits {
         padding: 16px;
+
     }
 
     .ant-layout-content {

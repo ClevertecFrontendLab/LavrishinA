@@ -14,7 +14,11 @@ export const Trigger = ({ isCollapsed, onTrigger }: Props) => {
             onClick={onTrigger}
             data-test-id={breakpoints.md ? 'sider-switch' : 'sider-switch-mobile'}
         >
-            {isCollapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+            {isCollapsed ? (
+                <MenuUnfoldOutlined style={{ color: '#8C8C8C' }} />
+            ) : (
+                <MenuFoldOutlined style={{ color: '#8C8C8C' }} />
+            )}
         </div>
     );
 };
