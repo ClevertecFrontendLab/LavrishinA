@@ -1,0 +1,31 @@
+.footer-card {
+    width: 240px;
+    border-radius: 3px;
+
+    .ant-card-head-title {
+        padding: 0;
+        text-align: left;
+    }
+
+
+}
+
+@media (max-width: 480px) {
+    .footer-card {
+        flex-grow: 2;
+        order: -1;
+    }
+
+    .footer-container {
+        padding: 16px;
+        justify-content: center;
+    }
+
+
+    .ant-layout-footer {
+        padding-bottom: 0;
+
+    }
+}
+
+

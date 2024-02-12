@@ -1,0 +1,46 @@
+.logoContainer {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 45px;
+}
+
+/*max-logo*/
+.logo {
+    width: 133px;
+    height: 33px;
+}
+
+.fullLogo {
+    padding: 14px 46px 17px 29px;
+    overflow: hidden;
+}
+
+/*min-logo*/
+.collapsedLogo {
+    width: 28px;
+    height: 28px;
+}
+
+.minLogo {
+    padding: 18px;
+}
+
+@media (max-width: 576px) {
+    .logoContainer {
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 8px;
+    }
+    .logo {
+        width: 72px;
+        height: 18px;
+    }
+
+    .fullLogo {
+        padding: 16px 17px
+
+    }
+
+
+
+}
