@@ -6,7 +6,7 @@ export const Loader = () => {
             autoplay
             loop
             src={animationData}
-            style={{ height: '300px', width: '300px' }}
+            style={{ height: '150px', width: '150px' }}
         />
     );
 };
