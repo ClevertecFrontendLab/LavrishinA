@@ -8,7 +8,10 @@ import 'antd/dist/antd.css';
 import './index.css';
 import {HistoryRouter} from 'redux-first-history/rr6';
 import {Navigate, Route, Routes} from 'react-router-dom';
-import { LoginPage, MainPage } from './pages';
+import {LoginPage, MainPage} from './pages';
+import {AuthForm, RegForm} from "@pages/login-page/ui/forms";
+import {ResultPage, Success, UserExist, Error} from '@pages/result-page';
+
 
 
 const domNode = document.getElementById('root') as HTMLDivElement;
@@ -19,10 +22,18 @@ root.render(
         <Provider store={store}>
             <HistoryRouter history={history}>
                 <Routes>
-                    <Route path={'/'} element={<Navigate to={'/auth'}/>}/>
-                    <Route path={'/auth'} element={<LoginPage/>}/>
+                    <Route path={'/'} element={<Navigate to={"/auth"}/>}/>
+                    <Route path={'/auth'} element={<LoginPage/>}>
+                        <Route index element={<AuthForm/>}/>
+                        <Route path={'registration'} element={<RegForm/>}/>
+                    </Route>
                     <Route path={'/main'} element={<MainPage/>}/>
-                    <Route path={'/result'}/>
+                    <Route path={'/result'} element={<ResultPage />}>
+                        <Route path={'success'} element={<Success/>}/>
+                        <Route path={'error-user-exist'} element={<UserExist/>}/>
+                        <Route path={'error'} element={<Error/>}/>
+                    </Route>
+
                 </Routes>
             </HistoryRouter>
         </Provider>

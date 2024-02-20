@@ -1,8 +1,9 @@
+
 .auth-wrapper {
     margin: 0 auto;
     max-width: 1440px;
     height: 1024px;
-    background: url('public/auth_page_light.jpeg') no-repeat center;
+    background: url('/auth_page_light.jpeg') no-repeat center;
     background-size: cover;
 
 }
@@ -36,40 +37,6 @@
     margin-bottom: 48px;
 }
 
-.ant-tabs {
-    width: 100%;
-}
-
-.ant-tabs-tab {
-    width: 100%;
-    justify-content: center;
-
-}
-
-.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
-    color: var(--primary-light-2);
-}
-
-
-.ant-tabs-nav-list {
-    width: 100%;
-}
-
-.form {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-}
-
-.form-button.ant-btn-link {
-    color: var(--primary-light-2);
-    padding-right: 0;
-}
-
-.form-button.ant-btn-primary {
-    background-color: var(--primary-light-2);
-    border-color: var(--primary-light-2);;
-}
 
 @media (max-width: 576px) {
     .auth-logo {

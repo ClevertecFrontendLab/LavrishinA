@@ -1,0 +1,12 @@
+.result.ant-result {
+    max-width: 540px;
+    width: 100%;
+    padding: 64px 85px;
+    background: var(--white);
+}
+
+.result .ant-btn-primary {
+    background: var(--primary-light-2);
+    border-color: var(--primary-light-2);
+    font-size: 0.88rem;
+}

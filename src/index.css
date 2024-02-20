@@ -12,7 +12,10 @@
 
 @import "/src/components/footer-card/footer-card.css";
 
+@import "/src/pages/login-page/ui/forms/froms.css";
 @import "/src/pages/login-page/login-page.css";
+@import "/src/pages/result-page/ui/results/result.css";
+
 h1, h2, h3, h4, p {
     margin: 0;
 }
