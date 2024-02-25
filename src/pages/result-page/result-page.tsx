@@ -1,15 +1,17 @@
-import {Outlet, useLocation, useNavigate} from "react-router-dom";
+import {Outlet, useNavigate} from "react-router-dom";
+import {useAppSelector} from "@hooks/typed-react-redux-hooks.ts";
+import {authSelectors} from "@pages/login-page/model/auth-slice.ts";
 import {useEffect} from "react";
 
 
-
 export const ResultPage = () => {
-    const location = useLocation()
     const navigate = useNavigate()
+    const notAllowed = useAppSelector(authSelectors.notAllowed)
 
     useEffect(() => {
-        if(!location.state?.isRedirected) navigate('/')
-    }, [location.state?.isRedirected, navigate]);
+        if (notAllowed) navigate('/auth/registration')
+    }, [notAllowed, navigate]);
+
     return (
         <div className={'auth-wrapper'}>
             <div className={'auth-background'}>

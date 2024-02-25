@@ -12,6 +12,8 @@ export const LoginPage = () => {
 
     const currentTab = location.pathname.substring(location.pathname.lastIndexOf('/') + 1)
 
+
+
     return (
 
 

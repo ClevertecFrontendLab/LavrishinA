@@ -18,12 +18,12 @@ export const RegForm = () => {
     const registrationHandler = (arg: RegistrationPayload) => {
         dispatch(authActions.userRegistration(arg))
             .unwrap()
-            .then(() => navigate('/result/success', {state: {isRedirected: true}}))
+            .then(() => navigate('/result/success'))
             .catch((status) => {
                 status === 409 ?
-                    navigate('/result/error-user-exist', {state: {isRedirected: true}})
+                    navigate('/result/error-user-exist')
                     :
-                    navigate('/result/error', {state: {isRedirected: true}})
+                    navigate('/result/error')
             })
     }
 

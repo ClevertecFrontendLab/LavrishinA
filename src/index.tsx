@@ -1,4 +1,3 @@
-import React from 'react';
 import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 import {history, store} from '@redux/configure-store';
@@ -10,8 +9,9 @@ import {HistoryRouter} from 'redux-first-history/rr6';
 import {Navigate, Route, Routes} from 'react-router-dom';
 import {LoginPage, MainPage} from './pages';
 import {AuthForm, RegForm} from "@pages/login-page/ui/forms";
-import {ResultPage, Success, UserExist, Error} from '@pages/result-page';
-
+import {ResultPage} from '@pages/result-page';
+import React from 'react';
+import {SummaryResult} from "@pages/result-page/ui/results/result.tsx";
 
 
 const domNode = document.getElementById('root') as HTMLDivElement;
@@ -28,10 +28,31 @@ root.render(
                         <Route path={'registration'} element={<RegForm/>}/>
                     </Route>
                     <Route path={'/main'} element={<MainPage/>}/>
-                    <Route path={'/result'} element={<ResultPage />}>
-                        <Route path={'success'} element={<Success/>}/>
-                        <Route path={'error-user-exist'} element={<UserExist/>}/>
-                        <Route path={'error'} element={<Error/>}/>
+                    <Route path={'/result/'} element={<ResultPage/>}>
+                        <Route path={'error'}
+                               element={<SummaryResult title="Данные не сохранились"
+                                                       subTitle="Что-то пошло не так и ваша регистрация не завершилась. Попробуйте ещё раз."
+                                                       status={"error"}
+                                                       redirectTo={'/auth/registration'}
+                                                       label={'Назад к регистрации'}/>}/>
+                        <Route path={'error-user-exist'}
+                               element={<SummaryResult title="Данные не сохранились"
+                                                       subTitle="Такой e-mail уже записан в системе. Попробуйте зарегистрироваться по другому e-mail."
+                                                       status={"error"}
+                                                       redirectTo={'/auth/registration'}
+                                                       label={'Назад к регистрации'}/>}/>
+                        <Route path={'success'}
+                               element={<SummaryResult title="Регистрация успешна"
+                                                       subTitle="Регистрация прошла успешно. Зайдите в приложение, используя свои e-mail и пароль."
+                                                       status={"success"}
+                                                       redirectTo={'/auth'}
+                                                       label={'Войти'}/>}/>
+                        <Route path={'error-login'}
+                               element={<SummaryResult title="Вход не выполнен"
+                                                       subTitle="Что-то пошло не так. Попробуйте еще раз"
+                                                       status={"warning"}
+                                                       redirectTo={'/auth'}
+                                                       label={'Повторить'}/>}/>
                     </Route>
 
                 </Routes>
