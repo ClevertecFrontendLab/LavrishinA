@@ -8,18 +8,14 @@ import {authSelectors} from "@pages/login-page/model/auth-slice.ts";
 
 export const LoginPage = () => {
     const location = useLocation()
-    const isLoading = useAppSelector(authSelectors.loadingState)
 
+    const isLoading = useAppSelector(authSelectors.loadingState)
     const currentTab = location.pathname.substring(location.pathname.lastIndexOf('/') + 1)
 
-
-
     return (
-
-
         <div className={'auth-wrapper'}>
             <div className={'auth-background'}>
-                <Spin spinning={isLoading} indicator={<Loader/>}>
+                <Spin data-test-id='loader' spinning={isLoading} indicator={<Loader/>}>
                     <div className={'form-container'}>
                         <svg className={'auth-logo'}>
                             <use xlinkHref={`${sprite}#logo`}/>
@@ -31,7 +27,7 @@ export const LoginPage = () => {
                             size={'large'}
                             items={[
                                 {
-                                    label: <NavLink  to={'/auth'}>Вход</NavLink>,
+                                    label: <NavLink to={'/auth'}>Вход</NavLink>,
                                     key: "auth",
                                     children: <Outlet/>,
                                 },

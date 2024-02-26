@@ -6,10 +6,11 @@ import {ComponentPropsWithoutRef} from "react";
 type SummaryResultProps = {
     label?: string
     redirectTo: string
+    dataTestId: string
 } & ComponentPropsWithoutRef<typeof Result>
 
 export const SummaryResult = (props: SummaryResultProps) => {
-    const {redirectTo, label} = props
+    const {redirectTo, label, dataTestId} = props
 
     return (
         <Result
@@ -17,7 +18,7 @@ export const SummaryResult = (props: SummaryResultProps) => {
             className={"result"}
             extra={
                 <Link to={redirectTo}>
-                    <Button type="primary" key="console" size={"large"} block>
+                    <Button data-test-id={dataTestId} type="primary" key="console" size={"large"} block>
                         {label}
                     </Button>
                 </Link>

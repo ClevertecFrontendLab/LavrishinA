@@ -6,11 +6,14 @@ import { ReactNode } from 'react';
 
 type Props = {
     children?: ReactNode;
+    onClick?: () => void
 };
 
-export const MenuButton = ({ children }: Props) => {
+
+export const MenuButton = ({ children, onClick}: Props) => {
     return (
         <Button
+            onClick={onClick}
             block
             style={{ position: 'absolute', textAlign: 'start' }}
             type={'default'}

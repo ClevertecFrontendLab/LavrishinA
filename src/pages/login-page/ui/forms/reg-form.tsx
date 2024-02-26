@@ -65,13 +65,13 @@ export const RegForm = () => {
                         },
                     }),
                 ]}>
-                    <Input.Password size={'large'} placeholder='Повторите пароль'></Input.Password>
+                    <Input.Password data-test-id='registration-confirm-password' size={'large'} placeholder='Повторите пароль'></Input.Password>
                 </Form.Item>
             </div>
 
             <div>
                 <Form.Item>
-                    <Button htmlType='submit' className={'form-button'} block type={'primary'}
+                    <Button data-test-id='registration-submit-button' htmlType='submit' className={'form-button'} block type={'primary'}
                             size={'large'}>
                         Войти
                     </Button>

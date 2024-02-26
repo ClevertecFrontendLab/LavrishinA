@@ -16,6 +16,8 @@ export const AuthForm = () => {
     const authHandler = (arg: AuthFormValues) => {
         dispatch(authActions.userAuth(arg)).unwrap().then(() => navigate('/main')).catch(() => navigate('/result/error-login'))
     }
+
+
     return (
         <Form className={'form'} initialValues={{remember: true}}
               onFinish={async (values: AuthFormValues) => {
@@ -24,27 +26,44 @@ export const AuthForm = () => {
             <div>
                 <Form.Item rules={[{required: true, message: ""}, {type: "email", message: ""}]}
                            name={'email'}>
-                    <Input addonBefore='e-mail:' size={'large'}/>
+                    <Input data-test-id='login-email' addonBefore='e-mail:' size={'large'}/>
                 </Form.Item>
 
-                <Form.Item rules={[{required: true, message: ""}]} name={'password'}>
-                    <Input.Password size={'large'} placeholder='Пароль'></Input.Password>
+                <Form.Item
+                    rules={[{required: true, message: ""}, {min: 8, message: ""}]}
+
+                    name={'password'}>
+                    <Input.Password data-test-id='login-password' size={'large'}
+                                    placeholder='Пароль'></Input.Password>
                 </Form.Item>
             </div>
 
             <Row justify={'space-between'} align={'middle'} wrap={false}>
                 <Form.Item style={{marginBottom: 0}} name="remember" valuePropName="checked">
-                    <Checkbox>Запомнить меня</Checkbox>
+                    <Checkbox data-test-id='login-remember'>Запомнить меня</Checkbox>
+                </Form.Item>
+                <Form.Item shouldUpdate>
+                    {({getFieldsValue}) => {
+                        const { email} = getFieldsValue();
+                        const formIsComplete = !!email;
+                        return (
+                            <Button disabled={!formIsComplete} data-test-id='login-forgot-button'
+                                    className={'form-button'}
+                                    size={'large'}
+                                    type={'link'}>
+                                Забыли пароль?
+                            </Button>
+                        );
+                    }}
                 </Form.Item>
 
-                <Button className={'form-button'} size={'large'} type={'link'}>
-                    Забыли пароль?
-                </Button>
+
             </Row>
 
             <div>
                 <Form.Item>
-                    <Button htmlType='submit' className={'form-button'} block type={'primary'}
+                    <Button data-test-id='login-submit-button' htmlType='submit'
+                            className={'form-button'} block type={'primary'}
                             size={'large'}>
                         Войти
                     </Button>

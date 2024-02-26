@@ -9,7 +9,7 @@ export const ResultPage = () => {
     const notAllowed = useAppSelector(authSelectors.notAllowed)
 
     useEffect(() => {
-        if (notAllowed) navigate('/auth/registration')
+        if (notAllowed) navigate('/auth')
     }, [notAllowed, navigate]);
 
     return (
@@ -20,6 +20,5 @@ export const ResultPage = () => {
         </div>
     );
 };
-
 
 

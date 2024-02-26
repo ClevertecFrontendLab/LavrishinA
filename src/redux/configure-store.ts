@@ -8,15 +8,6 @@ const { createReduxHistory, routerMiddleware, routerReducer } = createReduxHisto
     history: createBrowserHistory(),
 });
 
-// const localStorageMiddleware = createListenerMiddleware();
-//
-// localStorageMiddleware.startListening({
-//     matcher: isAnyOf(authActions.userAuth.fulfilled),
-//     effect: (action, listenerApi) => {
-//         localStorage.setItem("token", JSON.stringify((listenerApi.getState() as RootState).auth.token))
-//     },
-// });
-
 export const store = configureStore({
     reducer: combineReducers({
         router: routerReducer,

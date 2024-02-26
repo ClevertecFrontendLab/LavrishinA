@@ -1,7 +1,16 @@
-import {asyncThunkCreator, buildCreateSlice, isFulfilled, isPending, isRejected, PayloadAction} from "@reduxjs/toolkit";
+import {
+    asyncThunkCreator,
+    buildCreateSlice,
+    isFulfilled,
+    isPending,
+    isRejected,
+    PayloadAction
+} from "@reduxjs/toolkit";
 import {authApi, RegistrationPayload} from "@pages/login-page/api/login-api.tsx";
 import {isAxiosError} from "axios";
 import {AuthFormValues} from "@pages/login-page/ui/forms/auth-form.tsx";
+import {asyncLocalStorage} from "@utils/async-localstoreage.tsx";
+
 
 
 const createAuthSlice = buildCreateSlice({
@@ -10,7 +19,7 @@ const createAuthSlice = buildCreateSlice({
 
 const initialState = {
     isLoading: false as boolean,
-    notAllowed: false as boolean,
+    notAllowed: true as boolean,
     isAuthorized: false as boolean
 }
 
@@ -34,10 +43,12 @@ export const slice = createAuthSlice({
                 const {email, password, remember} = arg
                 try {
                     const res = await authApi.authUser({email, password})
-                    if (remember)  localStorage.setItem("token", JSON.stringify(res.data.accessToken))
+                    if (remember) {
+                        await asyncLocalStorage.setItem("token", JSON.stringify(res.data.accessToken))
+                    }
                 } catch (error) {
                     if (isAxiosError(error)) {
-                        return error.response?.status === 409 ? rejectWithValue(error.response?.status) : rejectWithValue(error.message)
+                        return rejectWithValue(null)
                     } else {
                         throw new Error("Some error occurred")
                     }
@@ -49,6 +60,22 @@ export const slice = createAuthSlice({
                 }
             }
         ),
+        userLogout: create.asyncThunk(async () => {
+            await asyncLocalStorage.removeItem("token")
+        }, {
+            fulfilled: (state) => {
+                state.isAuthorized = false
+            }
+        }),
+        initialize: create.asyncThunk(async (_arg: undefined, {rejectWithValue}) => {
+            try {
+                const token = await asyncLocalStorage.getItem("token")
+                if (token) return true
+                return rejectWithValue(null)
+            } catch (e) {
+                return rejectWithValue(null)
+            }
+        }),
         accessControl: create.reducer((state, action: PayloadAction<boolean>) => {
             state.notAllowed = action.payload
         })
@@ -70,8 +97,8 @@ export const slice = createAuthSlice({
     },
     selectors: {
         loadingState: (state) => state.isLoading,
-        notAllowed:
-            (state) => state.notAllowed
+        notAllowed: (state) => state.notAllowed,
+        isAuth: (state) => state.isAuthorized
     }
 })
 
